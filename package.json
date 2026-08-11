@@ -6,16 +6,34 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "db:seed": "tsx scripts/seed.ts",
+    "index:erc8004": "tsx scripts/index-erc8004.ts"
   },
   "dependencies": {
+    "@altananetwork/sdk": "^0.7.0",
+    "@supabase/supabase-js": "^2.112.3",
+    "@tanstack/react-query": "^5.101.4",
     "next": "16.3.0",
+    "openai": "^7.4.0",
+    "pg": "^8.23.0",
+    "pino": "^10.3.1",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "tsx": "^4.23.12",
+    "viem": "^2.55.13",
+    "vitest": "^4.1.10",
+    "wagmi": "^3.7.6",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
+    "@types/pg": "^8.21.0",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
